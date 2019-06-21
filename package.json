@@ -1,0 +1,33 @@
+{
+  "name": "express-xendit",
+  "version": "1.0.0",
+  "description": "Using Express and Mongoose for Xendit Pre-Assessment Test",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node app.js",
+    "test": "jest"
+  },
+  "author": "Rian Rais",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.3.3",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "7.3.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "nodemon": "^1.19.1",
+    "nyc": "^14.1.1",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "helmet": "^3.18.0",
+    "jest": "^24.8.0",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.6.0",
+    "morgan": "^1.9.1"
+  }
+}
