@@ -6,7 +6,7 @@ chai.use(chaiHttp)
 
 const expect = chai.expect
 
-describe('A successful flow from creating organization, member, comment and delete', () => {
+describe('A successful flow from creating organization, member, comment and delete comment before getting the deleted comment again:', () => {
   it('Should successfully create an organization named: randomorg', (done) => {
     chai.request(app)
       .post('/orgs/randomorg')
@@ -100,7 +100,7 @@ describe('A successful flow from creating organization, member, comment and dele
 })
 
 describe('A flow where all should return error code:', () => {
-  it(`Shouldn't create a new data on an existing organization`, (done) => {
+  it(`Shouldn't create a new data on an existing organization (randomorg)`, (done) => {
     chai.request(app)
       .post('/orgs/randomorg')
       .end((err, res) => {
@@ -136,6 +136,17 @@ describe('A flow where all should return error code:', () => {
   })
 
   it(`Shouldn't fetch any member on non-existant organization`, (done) => {
+    chai.request(app)
+      .get('/orgs/nonexistingorg/members')
+      .end((err, res) => {
+        if (err) throw err
+        expect(res).to.have.status(400)
+        expect(res.body.err).to.equal(`Organization couldn't be found.`)
+        done()
+      })
+  })
+
+  it(`Shouldn't fetch any comment on non-existing organization`, (done) => {
     chai.request(app)
       .get('/orgs/nonexistingorg/comments')
       .end((err, res) => {

@@ -116,6 +116,24 @@ Using Chai to test the API
 npm test
 ```
 
+## Unit Testing Flow
+
+Ideal successfull flow:
+- Create an organization named: randomorg
+- Create a member for randomorg
+- Create a comment attached to randomorg
+- Get all members from randomorg, returning an array with length of 1
+- Get all comments from randomorg, returning an array with length of 1
+- Delete all comments related to randomorg organization
+- Get 0 comments from randomorg, returning an empty array
+
+Error code flow:
+- Create an organization with existing name (randomorg)
+- Create a comment on non-existing organization
+- Create a member on non-existing organization
+- Get member list on non-existing organization
+- Get comment list on non-existing organization
+
 ## Author
 
 [Riansyah Rais](https://www.linkedin.com/in/riansyah-rais-66a78098)
