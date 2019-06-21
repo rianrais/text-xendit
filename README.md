@@ -1,6 +1,6 @@
 # Description
 
-Hi! This is my first time creating CRUD API with Express and Mongoose, and not to mention unit-testing as well. Was having fun and get a good learning from making this.
+Hi! This is my first time creating CRUD API with Express and Mongoose, and not to mention unit-testing as well. Was having fun and get a good learning from making this only in 3 days.
 
 ## Tech-Stack
 
