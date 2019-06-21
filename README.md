@@ -5,9 +5,13 @@ Hi! This is my first time creating CRUD API with Express and Mongoose, and not t
 ## Tech-Stack
 
 Node.JS
+
 Express
+
 MongoDB with Mongoose
+
 Jest & Chai
+
 Morgan (HTTP Request Logger)
 
 ## Installation
@@ -86,7 +90,7 @@ belongsTo Organization
 ```
 {
   content: "Whatever this is."
-  organizationId: ObjectID('52f24t2f42t2t')
+  organizationId: ObjectId('52f24t2f42t2t')
 }
 ```
 
@@ -99,7 +103,8 @@ belongsTo Organization
   loginName: "Morty"
   avatarUrl: "linkToEvilMorty.jpg"
   followersAmount: 0,
-  followingAmount: 201
+  followingAmount: 201,
+  organizationId: ObjectId('5e624f42f326373)
 }
 ```
 
