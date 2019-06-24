@@ -38,6 +38,8 @@ docker-compose up --build
 ├── config
 │   ├── database.js
 │   └── routes.js
+├── docker-files
+│   └── app.docker
 ├── controller 
 │   └── organization
 │       ├── OrganizationController.js
@@ -49,7 +51,8 @@ docker-compose up --build
 │   └── Organization.js
 ├── test
 │   └── all.test.js
-└── app.js
+├── app.js
+└── docker-compose.yaml
 ```
 
 ## Routes & API
