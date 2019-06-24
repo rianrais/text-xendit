@@ -18,9 +18,9 @@ database.connect(process.env.MONGODB_URI || 'mongodb://mongo:27017/xendit')
 
 app.use('/', allRoutes)
 
-// app.listen(port, () => {
-//   console.log(`This app started on port: ${port}`)
-// })
+app.listen(port, () => {
+  console.log(`This app started on port: ${port}`)
+})
 
 console.log('testing docker app')
 

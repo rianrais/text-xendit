@@ -14,6 +14,8 @@ Jest & Chai
 
 Morgan (HTTP Request Logger)
 
+Docker (Containerization)
+
 ## Installation
 
 ```bash
@@ -22,6 +24,12 @@ npm install
 
 ```bash
 npm start
+```
+
+## Run with Docker
+
+```bash
+docker-compose up --build
 ```
 
 ## Folder Structure
