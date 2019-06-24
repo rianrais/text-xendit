@@ -1,0 +1,13 @@
+FROM node:8.4-alpine
+
+# Install app dependencies
+RUN npm install yarn babel-cli -g
+RUN yarn global add nodemon
+RUN yarn install
+COPY package.json yarn.lock /
+
+EXPOSE 9000
+
+COPY . .
+
+CMD ["yarn", "start"]

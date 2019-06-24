@@ -14,12 +14,14 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(helmet())
 app.use(morgan('dev'))
 
-database.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/xendit')
+database.connect(process.env.MONGODB_URI || 'mongodb://mongo:27017/xendit')
 
 app.use('/', allRoutes)
 
-app.listen(port, () => {
-  console.log(`This app started on port: ${port}`)
-})
+// app.listen(port, () => {
+//   console.log(`This app started on port: ${port}`)
+// })
+
+console.log('testing docker app')
 
 module.exports = app

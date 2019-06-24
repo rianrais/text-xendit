@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+  xendit-test:
+    build:
+      context: .
+      dockerfile: ./docker-files/app.docker
+    ports:
+      - "9000:9000"
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    restart: always
+    ports:
+      - "27015:27017"
